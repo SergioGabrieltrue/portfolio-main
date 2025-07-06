@@ -7,23 +7,41 @@
     <meta name="description" content="Pagina de utilizacao profissional" />
     <meta name="author" content="Sergio Gabriel">
     <meta name="HTML, CSS, JavaScript, profissional">
-    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sergio's Page</title>
 </head>
 
 <body>
-    <header>
-        <h1>Sergio Gabriel Alves de Araújo</h1>
-        <div>Quem sempre busca, a recompensa é robusta</div>
-        <div><img src="imagens/sergio-gabriel.jpg" alt="Foto de Sergio Gabriel"></div>
-    </header>
+    <div class="top-banner">
+        <header class="cabecalho-principal">
+            <h1 class="cabecalho-principal-t">Sergio Gabriel Alves de Araújo</h1>
+            <div class="bloco-autoral">
+            <q class="frase-autoral">Quem sempre busca, a recompensa é robusta</q>
+            <cite>Sergio, o próprio</cite>
+            </div>
+            <div class="background-show">
+                <div class="container-foto-principal">
+                    <img src="imagens/sergio-gabriel.jpg" alt="Foto de Sergio Gabriel">
+                </div>
+            </div>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="sobmim">Sobre mim</a></li>
-            <li><a href="habilidades">Habilidades</a></li>
-            <li><a href="projetos">Projetos</a></li>
-        </ul>
-    </nav>
+        <nav class="main-menu">
+            <button id="hamburguer-button" class="hamburguer-button" aria-label="Menu Principal" aria-controls="menu"
+                aria-expanded="false">
+                <span class="icon"></span>
+            </button>
+            <ul class="lista-secao">
+                <li><a href="#sobmim">Sobre mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+            </ul>
+        </nav>
+    </div>
     <main>
         <section>
             <h2 id="sobmim">Sobre mim</h2>
@@ -42,6 +60,7 @@
         <aside>
             Informação a parte
             <a href="https://github.com/SergioGabrieltrue">Github</a>
+            <a href="linkedin.com/in/sergio-gabrieldev">Linkedin</a>
         </aside>
     </main>
 
