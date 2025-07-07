@@ -32,11 +32,19 @@
 }
 
 body {
-    background-color: rgb(220, 220, 230);
+   background: radial-gradient(circle at center, #7a1919 30%, #0f0f0f);
+    background-attachment: fixed;
+    color: white;
 }
 
-.top-banner {
-    padding-bottom: 1rem;
+section{
+    margin-bottom: 1rem;
+     h2{
+        font-family: "Tomorrow", Courier, monospace;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
 }
 
 .cabecalho-principal {
@@ -45,7 +53,7 @@ body {
 }
 
 .background-show {
-    background-image: radial-gradient(circle at 100% 90%, #000 39%, #781c1c 40%);
+    background-image: radial-gradient(circle at 100% 110%, #000 39%, rgb(78, 0, 0) 40%);
     padding: 2rem;
 }
 
@@ -94,7 +102,7 @@ body {
 
 .bloco-autoral{
     padding: 1.25rem;
-    background-color: rgb(122, 7, 7);
+    background-color: rgb(78, 0, 0);
     font-family: "Playfair Display", Arial, sans-serif;
     margin-bottom: 2rem;
 }
@@ -114,18 +122,27 @@ body {
     font-size: 0.9rem; 
 }
 
-.main-menu {}
+.main-menu {
+    position: relative;
+}
 
 .hamburguer-button {
-    font-size: 1rem;
+    display: flex;
     border: none;
+    background-color: transparent;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    margin: 1rem 0 1rem 0.5rem;
+    outline: 2px solid black;
+    outline-offset: 1px;
+    align-items: center;
+    justify-content: center;
+    .icon{
+        font-size: 1rem;
+    }
 }
 
-.hamburguer-button .icon {
-    display: inline-block;
-    width: 30px;
-    text-align: center;
-}
 
 .hamburguer-button[aria-expanded="false"] .icon::before {
     content: "\2630";
@@ -133,19 +150,54 @@ body {
 
 .hamburguer-button[aria-expanded="true"] .icon::before {
     content: "\2715";
+
 }
 
 .lista-secao {
     list-style-type: none;
     position: absolute;
-    opacity: 0;
-    visibility: hidden;
+    top: -20%;
+    left: 10%;
     display: flex;
-
+    outline: 4px groove black ;
+    outline-offset: -2px;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    transition: all 1s ease-in;
     li {
+        
         a {
             text-decoration: none;
             color: inherit;
         }
     }
+}
+
+.hamburguer-button[aria-expanded="false"] + .lista-secao{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hamburguer-button[aria-expanded="true"] + .lista-secao{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(10%)
+}
+
+#sobmim{
+    p{
+       text-align: center;
+       display: inline-block;
+       border: #000 solid 4px;
+       
+       line-height: 1.5;
+       margin: 0rem 1rem 1rem;
+       padding: 0.5rem; 
+       background-image: linear-gradient(to bottom right, #1a1a1a, #3c0d0d, #2b2b2b);
+    }
+}
+
+.fa-brands{
+    font-size: 4rem;
+    color: #e34c26
 }
